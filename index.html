@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Marcelin Diastiningsih Subandi">
+<meta name="dcterms.date" content="2024-01-20">
+
+<title>Analisis Pengaruh Nilai Ekspor terhadap Kinerja Ekspor Perikanan Indonesia (Lobster dan Tuna Sirip Kuning).</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analisis Pengaruh Nilai Ekspor terhadap Kinerja Ekspor Perikanan Indonesia (Lobster dan Tuna Sirip Kuning).</h1>
+<p class="subtitle lead">Metode Penelitian Politeknik APP Jakarta</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Marcelin Diastiningsih Subandi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="poltekapp.jpg" class="img-fluid"></p>
+<section id="pendahuluan" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pendahuluan"><span class="header-section-number">1</span> Pendahuluan</h2>
+<section id="latar-belakang" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="latar-belakang"><span class="header-section-number">1.1</span> Latar belakang</h3>
+<p>Indonesia, sebagai negara kepulauan terbesar di dunia, memiliki kekayaan sumber daya laut yang melimpah, termasuk lobster dan tuna sirip kuning. Ekspor produk perikanan ini memiliki kontribusi signifikan terhadap perekonomian Indonesia. Namun, dinamika ekspor ini belum sepenuhnya dipahami. Oleh karena itu, penelitian ini dirancang untuk menganalisis hubungan antara nilai ekspor lobster (variabel dependen) dengan nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning (variabel independen) menggunakan metode analisis linear berganda.</p>
+<p>Analisis ini penting untuk memahami bagaimana fluktuasi dalam nilai ekspor keseluruhan dan ekspor tuna sirip kuning dapat mempengaruhi nilai ekspor lobster. Hasil dari penelitian ini diharapkan dapat memberikan wawasan baru bagi pembuat kebijakan dalam merumuskan strategi untuk meningkatkan nilai ekspor lobster, serta memberikan pemahaman yang lebih baik tentang dinamika ekspor perikanan di Indonesia. Selain itu, penelitian ini juga dapat menjadi acuan untuk penelitian lebih lanjut mengenai ekonomi perikanan di Indonesia.</p>
+</section>
+<section id="ruang-lingkup" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="ruang-lingkup"><span class="header-section-number">1.2</span> Ruang lingkup</h3>
+<p>Ruang lingkup penelitian ini meliputi:</p>
+<ol type="1">
+<li><p><strong>Analisis Data Ekspor</strong>: Penelitian ini akan menganalisis data ekspor lobster, tuna sirip kuning, dan total ekspor Indonesia. Data ini akan digunakan untuk memahami hubungan antara variabel-variabel tersebut.</p></li>
+<li><p><strong>Metodologi Statistik</strong>: Penelitian ini akan menggunakan analisis linear berganda, sebuah metode statistik yang digunakan untuk memahami hubungan antara dua atau lebih variabel.</p></li>
+<li><p><strong>Dinamika Ekspor</strong>: Penelitian ini akan membahas dinamika ekspor lobster dan tuna sirip kuning, serta bagaimana perubahan dalam nilai ekspor ini dapat mempengaruhi ekspor keseluruhan.</p></li>
+<li><p><strong>Strategi Ekspor</strong>: Meskipun penelitian ini tidak akan membahas kebijakan pemerintah secara langsung, hasil penelitian ini dapat digunakan oleh berbagai pihak yang berkepentingan dalam industri perikanan untuk merumuskan strategi ekspor yang efektif.</p></li>
+<li><p><strong>Ekonomi Perikanan</strong>: Penelitian ini juga akan membahas ekonomi perikanan di Indonesia, dengan fokus pada ekspor lobster dan tuna sirip kuning.</p></li>
+</ol>
+</section>
+<section id="rumusan-masalah" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="rumusan-masalah"><span class="header-section-number">1.3</span> Rumusan masalah</h3>
+<p>Berikut adalah rumusan masalah yang relevan dengan topik penelitian:</p>
+<ol type="1">
+<li>Bagaimana hubungan antara nilai ekspor lobster dengan nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning?</li>
+<li>Apakah fluktuasi dalam nilai ekspor keseluruhan dan ekspor tuna sirip kuning memiliki pengaruh signifikan terhadap nilai ekspor lobster?</li>
+<li>Bagaimana dinamika ekspor lobster dan tuna sirip kuning dapat mempengaruhi ekspor keseluruhan Indonesia?</li>
+<li>Bagaimana hasil analisis ini dapat digunakan untuk merumuskan strategi ekspor yang efektif?</li>
+<li>Bagaimana penelitian ini dapat memberikan pemahaman yang lebih baik tentang ekonomi perikanan di Indonesia, khususnya ekspor lobster dan tuna sirip kuning?</li>
+</ol>
+</section>
+<section id="tujuan-dan-manfaat-penelitian" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="tujuan-dan-manfaat-penelitian"><span class="header-section-number">1.4</span> Tujuan dan manfaat penelitian</h3>
+<p>Tujuan dari penelitian ini adalah:</p>
+<ol type="1">
+<li><p>Untuk memahami hubungan antara nilai ekspor lobster dengan nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning.</p></li>
+<li><p>Untuk mengetahui pengaruh fluktuasi nilai ekspor keseluruhan dan ekspor tuna sirip kuning terhadap nilai ekspor lobster.</p></li>
+<li><p>Untuk memahami bagaimana dinamika ekspor lobster dan tuna sirip kuning dapat mempengaruhi ekspor keseluruhan Indonesia.</p></li>
+</ol>
+<p>Manfaat penelitian ini, khususnya untuk mahasiswa, adalah sebagai berikut:</p>
+<ol type="1">
+<li><p><strong>Pemahaman Konsep</strong>: Penelitian ini dapat membantu mahasiswa memahami konsep analisis linear berganda dan bagaimana menerapkannya dalam konteks ekonomi perikanan.</p></li>
+<li><p><strong>Keterampilan Analisis Data</strong>: Melalui penelitian ini, mahasiswa dapat mengembangkan keterampilan dalam menganalisis data ekspor dan memahami dinamikanya.</p></li>
+<li><p><strong>Pengetahuan Industri Perikanan</strong>: Penelitian ini dapat memberikan wawasan tentang industri perikanan di Indonesia, khususnya tentang ekspor lobster dan tuna sirip kuning.</p></li>
+<li><p><strong>Pengembangan Karir</strong>: Hasil penelitian ini dapat digunakan oleh mahasiswa yang berminat dalam karir di bidang perikanan atau ekonomi untuk memahami tren dan dinamika pasar.</p></li>
+<li><p><strong>Kontribusi Ilmiah</strong>: Penelitian ini juga dapat menjadi kontribusi ilmiah bagi mahasiswa dalam bidang ekonomi perikanan dan statistik.</p></li>
+</ol>
+</section>
+<section id="package" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="package"><span class="header-section-number">1.5</span> Package</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"D:/METOPEL UAS/CELINE METOPEL"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="studi-pustaka" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="studi-pustaka"><span class="header-section-number">2</span> Studi pustaka</h2>
+<p><strong>1. Ekonomi Perikanan dan Ekspor</strong></p>
+<p>Perikanan merupakan sektor penting dalam perekonomian Indonesia. Menurut Susilowati (2011), perikanan berkontribusi signifikan terhadap PDB negara dan merupakan sumber pekerjaan bagi jutaan orang. Ekspor produk perikanan, seperti lobster dan tuna sirip kuning, juga berkontribusi besar terhadap ekonomi.</p>
+<p><strong>2. Analisis Linear Berganda</strong></p>
+<p>Analisis linear berganda adalah metode statistik yang digunakan untuk memahami hubungan antara dua atau lebih variabel. Menurut Gujarati dan Porter (2009), analisis ini dapat digunakan untuk memprediksi nilai variabel dependen berdasarkan nilai variabel independen.</p>
+<p><strong>3. Dinamika Ekspor Lobster dan Tuna Sirip Kuning</strong></p>
+<p>Beberapa penelitian telah dilakukan untuk memahami dinamika ekspor produk perikanan. Misalnya, Satria et al.&nbsp;(2015) meneliti faktor-faktor yang mempengaruhi ekspor lobster di Indonesia. Sementara itu, Putra dan Yuliati (2017) meneliti hubungan antara ekspor tuna sirip kuning dengan variabel ekonomi lainnya.</p>
+<p><strong>4. Strategi Ekspor</strong></p>
+<p>Meskipun penelitian ini tidak akan membahas kebijakan pemerintah secara langsung, beberapa penelitian telah menunjukkan bahwa strategi ekspor yang efektif dapat meningkatkan nilai ekspor. Misalnya, Hidayat (2016) menunjukkan bahwa diversifikasi produk dan pasar dapat meningkatkan nilai ekspor.</p>
+<p><strong>5. Ekonomi Perikanan di Indonesia</strong></p>
+<p>Penelitian ini juga akan membahas ekonomi perikanan di Indonesia. Menurut Badan Pusat Statistik (2020), sektor perikanan berkontribusi sekitar 2,6% terhadap PDB Indonesia.</p>
+</section>
+<section id="metode-penelitian" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="metode-penelitian"><span class="header-section-number">3</span> Metode penelitian</h2>
+<section id="data" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>tahun</th>
+<th>lobster</th>
+<th>ekspor</th>
+<th>siripk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2003</td>
+<td>$ 933.435,00</td>
+<td>$ 71.553.141,04</td>
+<td>$ 562.830,00</td>
+</tr>
+<tr class="even">
+<td>2004</td>
+<td>$ 905.760,00</td>
+<td>$ 82.744.351,78</td>
+<td>$ 348.150,00</td>
+</tr>
+<tr class="odd">
+<td>2005</td>
+<td>$ 935.331,00</td>
+<td>$ 97.387.627,57</td>
+<td>$ 273.110,00</td>
+</tr>
+<tr class="even">
+<td>2006</td>
+<td>$ 1.067.782,00</td>
+<td>$ 113.143.425,29</td>
+<td>$ 299.180,00</td>
+</tr>
+<tr class="odd">
+<td>2007</td>
+<td>$ 992.860,00</td>
+<td>$ 127.226.102,18</td>
+<td>$ 361.860,00</td>
+</tr>
+<tr class="even">
+<td>2008</td>
+<td>$ 1.070.921,00</td>
+<td>$ 152.090.401,42</td>
+<td>$ 347.250,00</td>
+</tr>
+<tr class="odd">
+<td>2009</td>
+<td>$ 845.223,00</td>
+<td>$ 130.357.798,59</td>
+<td>$ 309.250,00</td>
+</tr>
+<tr class="even">
+<td>2010</td>
+<td>$ 939.852,00</td>
+<td>$ 183.480.562,96</td>
+<td>$ 381.040,00</td>
+</tr>
+<tr class="odd">
+<td>2011</td>
+<td>$ 1.161.657,00</td>
+<td>$ 235.095.129,14</td>
+<td>$ 339.290,00</td>
+</tr>
+<tr class="even">
+<td>2012</td>
+<td>$ 1.206.544,00</td>
+<td>$ 225.744.403,27</td>
+<td>$ 280.080,00</td>
+</tr>
+<tr class="odd">
+<td>2013</td>
+<td>$ 1.481.284,00</td>
+<td>$ 218.308.408,83</td>
+<td>$ 153.700,00</td>
+</tr>
+<tr class="even">
+<td>2014</td>
+<td>$ 1.815.230,00</td>
+<td>$ 210.820.082,83</td>
+<td>$ 142.510,00</td>
+</tr>
+<tr class="odd">
+<td>2015</td>
+<td>$ 1.355.905,00</td>
+<td>$ 182.158.298,80</td>
+<td>$ 79.630,00</td>
+</tr>
+<tr class="even">
+<td>2016</td>
+<td>$ 1.464.399,00</td>
+<td>$ 177.886.012,74</td>
+<td>$ 63.350,00</td>
+</tr>
+<tr class="odd">
+<td>2017</td>
+<td>$ 1.689.721,00</td>
+<td>$ 204.924.485,91</td>
+<td>$ 37.610,00</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>$ 1.574.130,00</td>
+<td>$ 218.905.647,88</td>
+<td>$ 98.640,00</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>$ 1.428.656,00</td>
+<td>$ 208.057.763,66</td>
+<td>$ 90.690,00</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>$ 1.608.548,00</td>
+<td>$ 183.546.577,02</td>
+<td>$ 113.060,00</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>$ 1.711.568,00</td>
+<td>$ 254.008.548,67</td>
+<td>$ 70.150,00</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>$ 1.650.858,00</td>
+<td>$ 323.079.953,66</td>
+<td>$ 60.320,00</td>
+</tr>
+</tbody>
+</table>
+<p>Fokus penelitian ini adalah untuk memahami hubungan antara nilai ekspor lobster dengan nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning. Melalui analisis linear berganda, penelitian ini bertujuan untuk mengetahui bagaimana fluktuasi dalam nilai ekspor keseluruhan dan ekspor tuna sirip kuning dapat mempengaruhi nilai ekspor lobster. Selain itu, penelitian ini juga berfokus pada pemahaman dinamika ekspor lobster dan tuna sirip kuning dan bagaimana perubahan dalam nilai ekspor ini dapat mempengaruhi ekspor keseluruhan Indonesia. Meskipun penelitian ini tidak akan membahas kebijakan pemerintah atau pihak berwenang secara langsung, hasilnya dapat digunakan oleh berbagai pihak yang berkepentingan dalam industri perikanan. Penelitian ini juga berfokus pada pemahaman yang lebih baik tentang ekonomi perikanan di Indonesia, khususnya ekspor lobster dan tuna sirip kuning.</p>
+</section>
+<section id="metode-analisis" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="metode-analisis"><span class="header-section-number">3.2</span> Metode analisis</h3>
+<p>Model analisis yang akan digunakan dalam penelitian ini adalah model regresi linear berganda. Model ini dapat ditulis dalam bentuk matematika sebagai berikut:</p>
+<p><span class="math display">\[ Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \epsilon \]</span></p>
+<p>dimana: - <span class="math inline">\(Y\)</span> adalah variabel dependen, yaitu nilai ekspor lobster.</p>
+<p>- <span class="math inline">\(\beta_0\)</span> adalah konstanta, yaitu nilai ekspor lobster ketika nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning sama dengan nol. - <span class="math inline">\(\beta_1\)</span> dan <span class="math inline">\(\beta_2\)</span> adalah koefisien regresi, yang mengukur perubahan dalam nilai ekspor lobster untuk setiap perubahan satu unit dalam nilai ekspor keseluruhan Indonesia (<span class="math inline">\(X_1\)</span>) dan nilai ekspor tuna sirip kuning (<span class="math inline">\(X_2\)</span>) secara terpisah, dengan asumsi variabel lainnya tetap. - <span class="math inline">\(\epsilon\)</span> adalah galat atau kesalahan pengukuran.</p>
+<p>Model ini akan diestimasi menggunakan metode kuadrat terkecil biasa (Ordinary Least Squares, OLS), yang bertujuan untuk meminimalkan jumlah kuadrat residu (perbedaan antara nilai observasi dan nilai yang diprediksi oleh model).</p>
+</section>
+</section>
+<section id="pembahasan" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pembahasan"><span class="header-section-number">4</span> Pembahasan</h2>
+<section id="pembahasan-masalah" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="pembahasan-masalah"><span class="header-section-number">4.1</span> Pembahasan masalah</h3>
+<section id="plot-dan-data" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="plot-dan-data"><span class="header-section-number">4.1.1</span> Plot dan Data</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#impor dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"lobster.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 20 × 4
+   tahun lobster     ekspor siripk
+   &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;
+ 1  2003  933435  71553141. 562830
+ 2  2004  905760  82744352. 348150
+ 3  2005  935331  97387628. 273110
+ 4  2006 1067782 113143425. 299180
+ 5  2007  992860 127226102. 361860
+ 6  2008 1070921 152090401. 347250
+ 7  2009  845223 130357799. 309250
+ 8  2010  939852 183480563. 381040
+ 9  2011 1161657 235095129. 339290
+10  2012 1206544 225744403. 280080
+11  2013 1481284 218308409. 153700
+12  2014 1815230 210820083. 142510
+13  2015 1355905 182158299.  79630
+14  2016 1464399 177886013.  63350
+15  2017 1689721 204924486.  37610
+16  2018 1574130 218905648.  98640
+17  2019 1428656 208057764.  90690
+18  2020 1608548 183546577. 113060
+19  2021 1711568 254008549.  70150
+20  2022 1650858 323079954.  60320</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"lobster.xlsx"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(dat) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">tahun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">lobster</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ekspor</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">siripk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2003</td>
+<td style="text-align: right;">933435</td>
+<td style="text-align: right;">71553141</td>
+<td style="text-align: right;">562830</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2004</td>
+<td style="text-align: right;">905760</td>
+<td style="text-align: right;">82744352</td>
+<td style="text-align: right;">348150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2005</td>
+<td style="text-align: right;">935331</td>
+<td style="text-align: right;">97387628</td>
+<td style="text-align: right;">273110</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2006</td>
+<td style="text-align: right;">1067782</td>
+<td style="text-align: right;">113143425</td>
+<td style="text-align: right;">299180</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">992860</td>
+<td style="text-align: right;">127226102</td>
+<td style="text-align: right;">361860</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2008</td>
+<td style="text-align: right;">1070921</td>
+<td style="text-align: right;">152090401</td>
+<td style="text-align: right;">347250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2009</td>
+<td style="text-align: right;">845223</td>
+<td style="text-align: right;">130357799</td>
+<td style="text-align: right;">309250</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">939852</td>
+<td style="text-align: right;">183480563</td>
+<td style="text-align: right;">381040</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">1161657</td>
+<td style="text-align: right;">235095129</td>
+<td style="text-align: right;">339290</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">1206544</td>
+<td style="text-align: right;">225744403</td>
+<td style="text-align: right;">280080</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">1481284</td>
+<td style="text-align: right;">218308409</td>
+<td style="text-align: right;">153700</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2014</td>
+<td style="text-align: right;">1815230</td>
+<td style="text-align: right;">210820083</td>
+<td style="text-align: right;">142510</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1355905</td>
+<td style="text-align: right;">182158299</td>
+<td style="text-align: right;">79630</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">1464399</td>
+<td style="text-align: right;">177886013</td>
+<td style="text-align: right;">63350</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: right;">1689721</td>
+<td style="text-align: right;">204924486</td>
+<td style="text-align: right;">37610</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: right;">1574130</td>
+<td style="text-align: right;">218905648</td>
+<td style="text-align: right;">98640</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">1428656</td>
+<td style="text-align: right;">208057764</td>
+<td style="text-align: right;">90690</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">1608548</td>
+<td style="text-align: right;">183546577</td>
+<td style="text-align: right;">113060</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">1711568</td>
+<td style="text-align: right;">254008549</td>
+<td style="text-align: right;">70150</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">1650858</td>
+<td style="text-align: right;">323079954</td>
+<td style="text-align: right;">60320</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(lobster<span class="sc">~</span>ekspor<span class="sc">+</span>siripk,<span class="at">data=</span>dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>ekspor,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Nilai FOB Ekspor "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>lobster,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Nilai FOB Lobster"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>tahun,dat<span class="sc">$</span>siripk,<span class="at">xlab=</span><span class="st">"Tahun"</span>,<span class="at">ylab=</span><span class="st">"Nilai FOB Tuna Sirip Kuning"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Plot Error</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>ekspor,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Nilai Ekspor Keseluruhan"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>lobster,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Nilai Ekspor Lobster"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>m<span class="ot">&lt;-</span><span class="fu">resid</span>(reg1)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>siripk,dat<span class="sc">$</span>m,<span class="at">xlab=</span><span class="st">"Nilai Ekspor Tuna Sirip Kuning"</span>,<span class="at">ylab=</span><span class="st">"error"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>) <span class="co"># membuat garis horizontal di y=0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="analisis-masalah" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="analisis-masalah"><span class="header-section-number">4.2</span> Analisis masalah</h3>
+<p>Hasil regresinya adalah</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lobster ~ ekspor + siripk, data = dat)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-242814  -91995  -31141   58646  364149 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  1.319e+06  1.972e+05   6.687 3.82e-06 ***
+ekspor       1.583e-03  7.672e-04   2.064 0.054677 .  
+siripk      -1.413e+00  3.282e-01  -4.306 0.000478 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 156400 on 17 degrees of freedom
+Multiple R-squared:  0.7862,    Adjusted R-squared:  0.7611 
+F-statistic: 31.26 on 2 and 17 DF,  p-value: 2.017e-06</code></pre>
+</div>
+</div>
+<p>Hasil analisis regresi Anda menunjukkan beberapa temuan penting:</p>
+<ol type="1">
+<li><p><strong>R-squared</strong>: Nilai R-squared sebesar 0,7862 menunjukkan bahwa sekitar 78,62% variasi dalam nilai ekspor lobster dapat dijelaskan oleh model Anda. Ini adalah hasil yang cukup baik, menunjukkan bahwa model Anda memiliki kekuatan prediksi yang kuat.</p></li>
+<li><p><strong>Intercept</strong>: Nilai intercept sebesar 1,319 berarti bahwa jika nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning sama dengan nol, maka nilai ekspor lobster diharapkan sebesar 1,319. Faktanya bahwa ini berpengaruh positif sangat signifikan menunjukkan bahwa variabel ini memiliki pengaruh yang kuat dan signifikan terhadap nilai ekspor lobster.</p></li>
+<li><p><strong>Nilai Ekspor Keseluruhan</strong>: Koefisien sebesar 1,583 untuk nilai ekspor keseluruhan Indonesia menunjukkan bahwa untuk setiap peningkatan satu unit dalam nilai ekspor keseluruhan, nilai ekspor lobster diharapkan meningkat sebesar 1,583, asumsi variabel lainnya tetap. Meskipun ini berpengaruh positif, namun hanya sedikit signifikan, menunjukkan bahwa variabel ini mungkin tidak memiliki pengaruh yang kuat terhadap nilai ekspor lobster.</p></li>
+<li><p><strong>Nilai Ekspor Tuna Sirip Kuning</strong>: Koefisien sebesar -1,413 untuk nilai ekspor tuna sirip kuning menunjukkan bahwa untuk setiap peningkatan satu unit dalam nilai ekspor tuna sirip kuning, nilai ekspor lobster diharapkan menurun sebesar 1,413, asumsi variabel lainnya tetap. Faktanya bahwa ini berpengaruh negatif sangat signifikan menunjukkan bahwa variabel ini memiliki pengaruh yang kuat dan signifikan terhadap nilai ekspor lobster, tetapi dalam arah yang berlawanan.</p></li>
+</ol>
+</section>
+<section id="kesimpulan" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="kesimpulan"><span class="header-section-number">4.3</span> Kesimpulan</h3>
+<p>Berdasarkan hasil penelitian dan analisis regresi linear berganda, dapat disimpulkan bahwa nilai ekspor lobster memiliki hubungan yang signifikan dengan nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning. Model regresi yang dibuat mampu menjelaskan sekitar 78,62% variasi dalam nilai ekspor lobster.</p>
+<p>Intercept positif yang sangat signifikan menunjukkan bahwa nilai ekspor lobster memiliki basis yang kuat, bahkan ketika nilai ekspor keseluruhan Indonesia dan nilai ekspor tuna sirip kuning sama dengan nol. Ini mungkin mencerminkan permintaan yang kuat dan stabil untuk lobster di pasar internasional.</p>
+<p>Koefisien positif untuk nilai ekspor keseluruhan Indonesia menunjukkan bahwa peningkatan ekspor keseluruhan cenderung diikuti oleh peningkatan dalam nilai ekspor lobster. Namun, koefisien ini hanya sedikit signifikan, yang mungkin menunjukkan bahwa faktor-faktor lain selain nilai ekspor keseluruhan juga mempengaruhi nilai ekspor lobster.</p>
+<p>Koefisien negatif yang sangat signifikan untuk nilai ekspor tuna sirip kuning menunjukkan bahwa peningkatan ekspor tuna sirip kuning cenderung diikuti oleh penurunan dalam nilai ekspor lobster. Ini mungkin mencerminkan persaingan antara produk perikanan dalam hal akses ke pasar ekspor atau preferensi konsumen.</p>
+<p>Penelitian ini memberikan pemahaman yang lebih baik tentang dinamika ekspor perikanan di Indonesia dan dapat digunakan oleh berbagai pihak yang berkepentingan dalam industri perikanan. Namun, perlu diingat bahwa penelitian ini tidak membahas kebijakan pemerintah atau pihak berwenang secara langsung. Selain itu, hasil penelitian ini harus ditafsirkan dengan hati-hati, mengingat adanya potensi variabel tersembunyi dan kompleksitas hubungan ekonomi yang mendasarinya.</p>
+</section>
+</section>
+<section id="referensi" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="referensi"><span class="header-section-number">5</span> Referensi</h2>
+<p>Susilowati, I. (2011). Kontribusi Sektor Perikanan terhadap Perekonomian Indonesia. Jurnal Ekonomi dan Pembangunan Indonesia, 12(1), 91-104.</p>
+<p>Gujarati, D. N., &amp; Porter, D. C. (2009). Basic Econometrics (5th ed.). McGraw-Hill.</p>
+<p>Satria, D., Yuliati, Y., &amp; Putra, I. G. N. A. (2015). Faktor-Faktor yang Mempengaruhi Ekspor Lobster Indonesia ke Jepang. E-Jurnal EP Unud, 4(9), 598-609.</p>
+<p>Putra, I. G. N. A., &amp; Yuliati, Y. (2017). Analisis Faktor-Faktor yang Mempengaruhi Ekspor Tuna Sirip Kuning Indonesia. E-Jurnal EP Unud, 6(09), 4872-4893.</p>
+<p>Hidayat, M. (2016). Strategi Peningkatan Ekspor Indonesia. Jurnal Ekonomi dan Pembangunan Indonesia, 17(1), 20-34.</p>
+<p>Badan Pusat Statistik. (2020). Statistik Indonesia 2020. BPS.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
